@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.utils.html import mark_safe
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
+
 from appcore.models import User, Profile, Post, Comment, Reaction, Survey, SurveyResponse, Notification, Group
+
 from django import forms
 from django.urls import path
 
@@ -13,7 +15,6 @@ class MyAdminSite(admin.AdminSite):
         return [path('stats/', self.stats_view)] + super().get_urls()
 
     def stats_view(self, request):
-        # Implementation for the custom stats view can be added here
         pass
 
 
